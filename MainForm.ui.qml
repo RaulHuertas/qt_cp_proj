@@ -28,4 +28,55 @@ Item {
             text: qsTr("Press Me 3")
         }
     }
+
+    Slider {
+        id: pitch
+        x: 200
+        y: 56
+        minimumValue: -100
+        enabled: false
+        maximumValue: 100
+        value: _receiver.pitch
+    }
+
+    Slider {
+        id: roll
+        x: 200
+        y: 84
+        value: _receiver.roll
+        enabled: false
+        minimumValue: -100
+        maximumValue: 100
+    }
+
+    Slider {
+        id: yaw
+        x: 200
+        y: 112
+        value: _receiver.yaw
+        enabled: false
+        minimumValue: -200
+        maximumValue: 200
+    }
+
+    Label {
+        id: label1
+        x: 120
+        y: 62
+        text: qsTr("Pitch")
+    }
+
+    Label {
+        id: label2
+        x: 120
+        y: 90
+        text: qsTr("Roll")
+    }
+
+    Label {
+        id: label3
+        x: 120
+        y: 118
+        text: qsTr("Yaw")
+    }
 }
